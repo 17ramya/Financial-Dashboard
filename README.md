@@ -2,7 +2,7 @@
 
 An elegantly designed, highly interactive, and completely responsive Finance Dashboard built using React and Vanilla CSS. It provides a comprehensive visual overview of financial activity, transaction management, and basic simulated role-based access.
 
-## ✨ Core Requirements Implemented
+## Core Requirements Implemented
 
 1. **Dashboard Overview**
    - **Summary Cards**: At-a-glance metrics for Total Balance, Total Income, and Total Expenses.
@@ -33,7 +33,7 @@ An elegantly designed, highly interactive, and completely responsive Finance Das
    - Centralized state using the **React Context API** (`FinanceContext`).
    - Completely avoids prop drilling while managing application-wide statuses (Active Theme, Active Role, Sandbox Transaction Data, global Loading State).
 
-## 🚀 Optional Enhancements Included
+## Enhancements Included
 
 - **Dark & Light Mode** fully supported via CSS variables (Defaulting to Dark mode).
 - **Data Persistence**: Transactions, theme picks, and role selection natively persist across browser reloads via `localStorage`.
@@ -41,14 +41,14 @@ An elegantly designed, highly interactive, and completely responsive Finance Das
 - **Mock API Implementation**: Simulates real-world application booting with a graceful loading screen and delayed network state logic.
 - **Modern Animations**: Subtle entrance animations (`fade-in`) and card-hover scales established to make the UI feel alive.
 
-## 📱 Responsiveness Approach
+## Responsiveness Approach
 
 A flawless mobile-first mindset applied strictly via custom Vanilla CSS (without relying on bloated UI libraries).
 - On devices `< 768px`, the left Sidebar natively collapses into a sticky, screen-wide bottom icon navigation bar.
 - Flow structures automatically transition their `grid-templates` down to single `1fr` columns.
 - Deeply protected flex containers force `min-width: 0` constraints to ensure inner tables overflow internally (with smooth horizontal swipe scrolling) rather than breaking the broader app layout structure. 
 
-## 🛠️ Setup Instructions
+## Setup Instructions
 
 To get this dashboard up and running on your local machine:
 
@@ -64,7 +64,7 @@ To get this dashboard up and running on your local machine:
    ```
 5. Open the displayed local URL (typically `http://localhost:5173`) in your browser.
 
-## 🏗️ Technical Architecture & Quality
+## Technical Architecture & Quality
 
 - **Component Driven**: The codebase separates logical layout wrappers (`Layout.jsx`) from views (`Dashboard.jsx`, `Transactions.jsx`) to enforce clean, readable abstraction. 
 - **Vanilla Dependency**: By deliberately ignoring CSS frameworks like Tailwind or Material UI, this demonstrates an absolute core mastery over raw CSS implementations. Includes custom scrollbars, CSS variables logic switching, glassmorphic `backdrop-filter` rendering, and isolated breakpoint logic.
