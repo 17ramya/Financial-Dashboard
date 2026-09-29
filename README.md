@@ -83,7 +83,7 @@ npm run preview   # serves dist/ on http://localhost:4173
 
 `.github/workflows/deploy.yml` lints, builds and publishes the site on every push to `main`:
 
-1. One-time setup: in the repository open **Settings → Pages → Build and deployment** and set **Source** to **GitHub Actions**.
+1. **Required one-time setup**: in the repository open **Settings → Pages → Build and deployment** and set **Source** to **GitHub Actions**. Until this is done the workflow stops at the `Configure Pages` step - enable Pages, then re-run it from **Actions → Deploy to GitHub Pages → Re-run all jobs** (or push another commit).
 2. Push to `main`, or run the **Deploy to GitHub Pages** workflow manually from the **Actions** tab.
 3. The site goes live at `https://<owner>.github.io/<repository>/`.
 
