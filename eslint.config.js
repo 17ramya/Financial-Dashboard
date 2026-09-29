@@ -26,4 +26,11 @@ export default defineConfig([
       'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
     },
   },
+  {
+    // Tooling config files run in Node, not the browser (e.g. process.env in vite.config.js).
+    files: ['*.config.js'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
 ])

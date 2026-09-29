@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Layout from './layout/Layout';
 import Dashboard from './pages/Dashboard';
 import Transactions from './pages/Transactions';
-import { useFinance } from './context/FinanceContext';
+import { useFinance } from './context/useFinance';
 import './App.css';
 
 function AppContent() {

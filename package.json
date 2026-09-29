@@ -1,8 +1,13 @@
 {
   "name": "finance-dashboard",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "FinDash - a responsive React finance dashboard with interactive charts, transaction management and simulated role-based access.",
   "type": "module",
+  "engines": {
+    "node": "^20.19.0 || >=22.12.0",
+    "npm": ">=10"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",

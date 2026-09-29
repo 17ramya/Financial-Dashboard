@@ -1,9 +1,6 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
+import { FinanceContext } from './useFinance';
 import { initialTransactions } from '../data/mockData';
-
-const FinanceContext = createContext();
-
-export const useFinance = () => useContext(FinanceContext);
 
 export const FinanceProvider = ({ children }) => {
   // Try to load from localStorage, otherwise use initial setup

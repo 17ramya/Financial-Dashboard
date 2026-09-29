@@ -7,16 +7,28 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies and build output (CI regenerates dist on every deploy)
 node_modules
 dist
 dist-ssr
+build
 *.local
+
+# Environment files - never commit secrets. Commit .env.example instead if you add variables.
+.env
+.env.*
+!.env.example
+
+# Test / coverage output
+coverage
+.eslintcache
 
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
 .idea
 .DS_Store
+Thumbs.db
 *.suo
 *.ntvs*
 *.njsproj

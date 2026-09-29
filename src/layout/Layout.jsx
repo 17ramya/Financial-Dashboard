@@ -1,5 +1,5 @@
 import React from 'react';
-import { useFinance } from '../context/FinanceContext';
+import { useFinance } from '../context/useFinance';
 import { LayoutDashboard, Receipt, Moon, Sun, Shield, ShieldAlert, Wallet } from 'lucide-react';
 import './Layout.css';
 

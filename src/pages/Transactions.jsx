@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useFinance } from '../context/FinanceContext';
+import { useFinance } from '../context/useFinance';
 import { Search, Plus, Trash2, ArrowUpRight, ArrowDownRight, Filter, Download } from 'lucide-react';
 import './Transactions.css';
 

@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { useFinance } from '../context/FinanceContext';
+import { useFinance } from '../context/useFinance';
 import { AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, BarChart, Bar, Legend, PieChart, Pie, Cell, LineChart, Line } from 'recharts';
 import { TrendingUp, TrendingDown, DollarSign, Wallet, Calendar } from 'lucide-react';
 import './Dashboard.css';
