@@ -78,38 +78,9 @@ npm run lint      # quality gate - the same check CI runs
 npm run build     # -> dist/
 npm run preview   # serves dist/ on http://localhost:4173
 ```
+### Live demo link 
 
-### GitHub Pages (included, automatic)
-
-`.github/workflows/deploy.yml` lints, builds and publishes the site on every push to `main`:
-
-1. **Required one-time setup**: in the repository open **Settings → Pages → Build and deployment** and set **Source** to **GitHub Actions**. Until this is done the workflow stops at the `Configure Pages` step - enable Pages, then re-run it from **Actions → Deploy to GitHub Pages → Re-run all jobs** (or push another commit).
-2. Push to `main`, or run the **Deploy to GitHub Pages** workflow manually from the **Actions** tab.
-3. The site goes live at `https://<owner>.github.io/<repository>/`.
-
-The workflow exports `VITE_BASE_PATH=/<repository>/`, so Vite emits asset URLs that work under the GitHub Pages project sub-path. No `gh-pages` branch or manual upload is involved. `.github/workflows/ci.yml` runs the same lint + build checks on pull requests and side branches.
-
-### Netlify / Vercel (optional)
-
-Both hosts are pre-configured and build from the same source - import the repository and accept the detected settings:
-
-| Host | Config file | What it sets up |
-| --- | --- | --- |
-| Netlify | `netlify.toml` | `npm run build` → `dist`, SPA redirect, immutable caching for hashed assets, security headers |
-| Vercel | `vercel.json` | Same build/output directory, SPA rewrite and asset caching |
-
-### Environment variables
-
-| Variable | Default | Purpose |
-| --- | --- | --- |
-| `VITE_BASE_PATH` | `/` | Public base path the bundle is served from. Set it to `/<repository>/` for GitHub Pages project sites; leave it unset for root/domain hosting (Netlify, Vercel, custom domains). |
-
-Deployment-specific settings:
-
-- Failed renders are caught by `src/components/ErrorBoundary.jsx`, which shows a recovery screen instead of a blank page.
-- The app is client-side only, so each host is configured to fall back to `index.html` for unknown paths.
-- The persisted theme is applied by a tiny inline script in `index.html` before first paint, avoiding a light/dark flash on reload.
-
+  https://financial-dashboard-ten-rust.vercel.app/
 
 ## Technical Architecture & Quality
 
